@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Konfigurasi Dua Router Di Cisco Packet Tracer</title>
+	<link rel="stylesheet" href="css/artikel.css">
+	<link rel="stylesheet" href="css/font.css">
+	<style>
+	#footeratas{
+		background-image: url(images/home/title.jpg);
+	}
+	@font-face{
+		font-family: "Cocomat";
+		src: url('font/Cocomat.ttf');
+         }
+	@font-face{
+		font-family: "advent";
+		src: url('font/advent.ttf');
+         }
+	@font-face{
+		font-family: "Cocomat-light";
+		src: url('font/Cocomat-light.ttf');
+         }
+	@font-face{
+		font-family: "josefinbold";
+		src: url('font/JosefinSans-Bold.ttf');
+         }
+	</style>
+</head>
+<body>
+	<div id="wrapper">
+		<div id="header">
+			<div id="headeratas">
+			<div id="atas">
+			<ul id="sosial">
+				<li><a href="#"><img src="images/home/sosial.png" alt="" usemap="#sosialicon"></a></li>
+			</ul>
+			<map name ="sosialicon">
+			 <area shape ="rect" coords="0,0,18px,30px" title="facebook" href="#">
+			 <area shape ="rect" coords="19px,0,51px,30px" title="twitter" href="#">
+			 <area shape ="rect" coords="52px,0,79px,30px" title="path" href="#">
+			 <area shape ="rect" coords="53,0,113px,30px" title="in" href="#">
+			 <area shape ="rect" coords="54,0,139px,30px" title="talk" href="#"> 
+			</map>
+			<ul id="email">
+				<li><img src="images/home/call.png" alt="">+6285851944486</li>
+				<li><a href="mailto:rizael.ichigo28@gmail.com"><img src="images/home/email.png" alt="">rizael.ichigo28@gmail.com</a></li>
+			</ul>
+			</div> <!-- atas -->
+			</div> <!-- headeratas -->
+			<div id="menuatas">
+			<div id="menu">
+				<div id="solusi">
+				<img src="images/home/logo1.png" alt="" class="logomenu">
+				<ul id="menu-utama">
+					<li><a href="#" >Hubungi Saya</a></li>
+					<li><a href="#" >Tentang</a></li>
+					<li><a href="#" ><font color="#E3463F">Tutorial</font></a>
+						<ul>
+					<li><a href="jaringandasar.html">Jaringan Dasar</a></li>
+					<li><a href="#">Perakitan Komputer</a></li>
+					<li><a href="#">Sistem Operasi</a></li>
+					<li><a href="#">Pemrograman Web</a></li>
+						</ul>
+					</li>
+					<li><a href="index.html">Beranda</a></li>
+				</ul> <!-- menu-utama -->
+				</div>
+				<div id="titleatas">
+			<hr width="100%" class="garis1">	
+			<div id="title">
+				<h3>Konfigurasi Dua Router Di Cisco Packet Tracer</h2>
+				<h6>Oleh : <strong> Rizal Fauzi</strong> &nbsp; Rabu,13 April 2016</h6>
+				</div><!-- title -->
+
+			</div><!-- titleatas -->
+			<hr width="100%" class="garis2">
+			</div> <!-- menu -->
+
+			</div> <!-- menuatas -->
+		</div><!-- header -->
+		<div id="containeratas">
+		<div id="container">
+			<div id="artikel">
+
+			<div class="entry-content">
+			<p>Dalam mengkonfigurasi dua router atau memngkoneksikan dua jaringan yang berbeda dalam dua router sebenarnya cukup mudah, cukup dengan memberikan ip address pada kedua router tersebut. Pertama-tama buka Aplikasi Cisco Packet Tracer dan Buat layout jaringannya seperti yang ada dibawah ini :</p>
+			</div> <!-- entry-content -->
+			<div class="image">
+				<img src="images/artikel1/1.jpg" alt="gambar1">
+			</div><!-- image -->
+			<p>Setelah membuat layout jaringan seperti diatas, maka selanjutnya yaitu mengkonfigurasi router. Pertama klik pada router0 kemudian masuk pada konfigurasi CLI </p>
+			<div class="image">
+				<img src="images/artikel1/2.jpg" alt="gambar1">
+			</div><!-- image -->
+			<p>Ketik atau tuliskan perintahnya seperti diatas : <br>1. en (untuk mengaktifkan router) <br>2. conf t (untuk masuk dalam konfigurasi terminal router) <br>3. int fa0/1 (untuk masuk kedalam ethernet 0/1) <br>4. ip add 192.168.27.1 255.255.255.0 (memberikan ip address pada ethernet 0/1) <br>5. no shut (no shutdown, supaya konfig ip tidak mati) <br>6. ex (exit, untuk keluar dari config int fa0/1) <br>7. int fa0/0 (untuk masuk ke konfigurasi fast ethernet 0/0) <br>8. ip add 192.168.26.1 255.255.255.0 (ip yang diberikan untuk fasth ethernet 0/0) <br>9. no shut (no shutdown, supaya konfig ip tidak mati) <br>10. ex (exit, untuk keluar dari konfigurasi fast ethernet 0/0) <br>11. ex (exit, untuk keluar dari konfigurasi terminal router) <br>12. copy running-config startup-config</p>
+			<p>Setelah melakukan konfigurasi ip address pada router0 maka selanjutnya adalah mengkonfigurasi router1. Klik pada router1 dan masuk pada konfigurasi CLI</p>
+			<div class="image">
+				<img src="images/artikel1/3.jpg" alt="gambar1">
+			</div><!-- image -->
+			<p>Ketik atau tuliskan perintahnya seperti diatas : <br>1. en (untuk mengaktifkan router) <br>2. conf t (untuk masuk dalam konfigurasi terminal router) <br>3. int fa0/0 (untuk masuk kedalam ethernet 0/0) <br>4. ip add 192.168.26.2 255.255.255.0 (memberikan ip address pada ethernet 0/0) <br>5. no shut (no shutdown, supaya konfig ip tidak mati) <br>6. ex (exit, untuk keluar dari config int fa0/0) <br>7. int fa0/1 (untuk masuk ke konfigurasi fast ethernet 0/0) <br>8. ip add 192.168.28.1 255.255.255.0 (ip yang diberikan untuk fasth ethernet 0/1) <br>9. no shut (no shutdown, supaya konfig ip tidak mati) <br>10. ex (exit, untuk keluar dari konfigurasi fast ethernet 0/1) <br>11. ex (exit, untuk keluar dari konfigurasi terminal router) <br>12. copy running-config startup-config <br> Setelah itu keluar dari router1</p>
+			<p>Setelah mengkonfigurasi ip address pada kedua router selanjutnya adalah menghubungkan atau mengkoneksikan kedua router, klik pada router0 dan masuk pada konfigurasi CLI</p>
+			<div class="image">
+				<img src="images/artikel1/4.jpg" alt="gambar1">
+			</div><!-- image -->
+			<p>Ketik atau tuliskan perintahnya seperti diatas : <br>1. en (untuk mengaktifkan router) <br>2. conf t (untuk masuk dalam konfigurasi terminal router) <br>3. router rip (untuk menghubungkan kedua router) <br>4. network 192.168.26.0 <br>5. network 192.168.27.0 <br>6. ex (exit, untuk keluar dari konfigurasi router rip) <br>7. ex (exit, untuk keluar dari configurasi terminal) <br>8. copy running-config startup-config <br>Setelah itu keluar dari router0</p>
+			<p>Selanjutnya klik pada router1 dan masuk ke konfigurasi CLI</p>
+			<div class="image">
+				<img src="images/artikel1/5.jpg" alt="gambar1">
+			</div><!-- image -->
+			<p>Ketik atau tuliskan perintahnya seperti diatas : <br>1. en (untuk mengaktifkan router) <br>2. conf t (untuk masuk dalam konfigurasi terminal router) <br>3. router rip (untuk menghubungkan kedua router) <br>4. network 192.168.26.0 <br>5. network 192.168.28.0 <br>6. ex (exit, untuk keluar dari konfigurasi router rip) <br>7. ex (exit, untuk keluar dari configurasi terminal) <br>8. copy running-config startup-config <br>Setelah itu keluar dari router1 <br>Kemudian masuk ke PC0 > Desktop > Ip Configuration dan setting Ip nya seperti dibawah ini : </p>
+			<div class="image">
+				<img src="images/artikel1/6.jpg" alt="gambar1">
+			</div><!-- image -->
+			<p>Setelah setting ip pada PC0 selanjutnya,<br> Setting IP pada PC1 > 192.168.27.3 Subnet : 255.255.255.0 Gateway : 192.168.27.1 <br> Setting IP pada PC2 > 192.168.27.4 Subnet : 255.255.255.0 Gateway : 192.168.27.1 <br>Setting IP pada PC3 > 192.168.28.2 Subnet : 255.255.255.0 Gateway : 192.168.28.1 <br>Setting IP pada PC4 > 192.168.28.3 Subnet : 255.255.255.0 Gateway : 192.168.28.1 <br> Setting IP pada PC2 > 192.168.28.4 Subnet : 255.255.255.0 Gateway : 192.168.28.1   
+			 </p>
+			 <p>Seperti dibawah ini jadinya :</p>
+			 <div class="image">
+				<img src="images/artikel1/7.jpg" alt="gambar1">
+			</div><!-- image -->
+			<p>Setelah itu coba kita PING dari PC5 menuju PC0, kalau hasilnya seperti dibawah ini berarti anda telah berhasil :-) </p>
+			<p>Selamat mencoba semoga berhasil. Sekian sedikit Tutorial Konfigurasi 2 router dari saya, ada kurang lebihnya saya mohon maaf. Assalamualaikum Wr.Wb</p>
+			<div class="image">
+				<img src="images/artikel1/8.jpg" alt="gambar1">
+			</div><!-- image -->
+			</div> <!-- artikel  -->
+			<div id="sidebar">
+				
+			</div> <!-- sidebar -->
+		</div>
+	</div><!-- containeratas -->
+	</div>
+	<hr id="garis3" color="#E3463F">
+		<div id="footeratas">
+			<div id="ketfooter">
+				<ul>
+					<li><img src="images/home/logo1.png" alt="" id="logo">
+					<p>Allhamdulillah, Puji syukur kehadirat Allah S.W.T karena atas berkat rahmat dan hidayahnya sehinnga saya bisa menyelesaikan pembuatan website ini. Serta saya ucapkan terimakasih kepada <strong>Pak Ashabul Yamin S,pd</strong> selaku guru Pemrograman Web saya karena atas bimbingannya sehingga website ini bisa terselesaikan. </p></li>
+					<li><h3>QUICK LINKS</h3>
+						<hr>
+						<ul>
+							<li><a href="#">About Us</a>
+								<hr></li>
+							<li><a href="#">Deliver Information</a>
+								<hr></li>
+							<li><a href="#">Terms </a>
+								<hr></li>
+							<li><a href="#">Privacy Policy</a>
+								<hr></li>
+							<li><a href="#">Contest</a>
+								<hr></li>
+						</ul></li>
+						<li><h3>MY ACCOUNT</h3>
+						<hr>
+						<ul>
+							<li><a href="#">My Account</a>
+								<hr></li>
+							<li><a href="#">Login</a>
+								<hr></li>
+							<li><a href="#">Terms </a>
+								<hr></li>
+							<li><a href="#">My Cart</a>
+								<hr></li>
+							<li><a href="#">Checkout</a>
+								<hr></li>
+						</ul></li>
+						<li><h3>PENCARIAN</h3> <hr>
+							<p><strong>Mau Cari Artikel di Website ini ?</strong> Cari artikel dan tutorial seputar teknologi informasi yang ada di website ini dibawah ini :</p>
+							<div id="form">
+			<input id="pencarian" type="text" name="pencarian"/>
+			<input id="submit" type="submit" value="CARI" />
+		</div>
+						</li>
+				</ul>
+			</div> <!-- ketfooter -->
+		</div> <!-- footeratas -->
+		<div id="footer">
+				<div id="isifooter">
+					<ul>
+						<li><p>2016</p></li>
+						<li><p>All Rights Reserved</p></li>
+					</ul>
+					<p id="copyright">@Copyright by Muhammad Rizal Fauzi Wahyu Putra
+					</p>
+				</div> <!-- isifooter -->
+			</div> <!-- footer -->
+	</div><!-- wrapper -->
+</body>
+</html>
